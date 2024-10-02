@@ -1,0 +1,1 @@
+ firebase deploy --only hosting:portfolio-4d53d
