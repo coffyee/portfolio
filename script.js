@@ -195,47 +195,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   animate()
 
-  // Typewriter effect - improved version
-  const typewriterContainer = document.querySelector(".typewriter-container")
+  // Typewriter effect
   const typewriterText = document.querySelector(".typewriter-text")
-
-  // Store the original content and clear the container
-  const spans = typewriterText.querySelectorAll("span")
+  const words = typewriterText.innerHTML
   typewriterText.innerHTML = ""
 
-  // Function to animate typing with proper HTML structure
-  function animateTyping() {
-    let delay = 1000 // Initial delay before typing starts
+  let charIndex = 0
 
-    spans.forEach((span, index) => {
-      const text = span.textContent
-      const className = span.className
-
-      // Create a new span with the same class
-      const newSpan = document.createElement("span")
-      if (className) {
-        newSpan.className = className
-      }
-
-      // Add the empty span to the container
-      typewriterText.appendChild(newSpan)
-
-      // Animate each character in the span
-      for (let i = 0; i < text.length; i++) {
-        setTimeout(
-          () => {
-            newSpan.textContent = text.substring(0, i + 1)
-          },
-          delay + i * 50,
-        )
-      }
-
-      // Update delay for the next span
-      delay += text.length * 50
-    })
+  function typeWriter() {
+    if (charIndex < words.length) {
+      typewriterText.innerHTML += words.charAt(charIndex)
+      charIndex++
+      setTimeout(typeWriter, 50)
+    }
   }
 
-  // Start the animation
-  setTimeout(animateTyping, 1000)
+  setTimeout(typeWriter, 1000)
 })
 

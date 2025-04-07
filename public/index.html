@@ -1,104 +1,631 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="google-site-verification" content="googlef57d6c07c65b3070.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shukla Shrestha</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shukla Shrestha - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
+  <div class="particles-container">
+    <canvas id="particles-canvas"></canvas>
+  </div>
 
-    <div class="animation01">
-        <div class="rhombus_small">
-            <div class="rhombus">
-                <div class="border_box">
-                    <span class="line line01"></span>
-                    <span class="line line02"></span>
-                    <span class="line line03"></span>
-                    <span class="line line04"></span>
-                    <span class="circle circle01"></span>
-                    <span class="circle circle02"></span>
-                    <span class="circle circle03"></span>
-                    <span class="circle circle04"></span>
-                    <span class="animation_line animation_line01"></span>
-                    <span class="animation_line_wrapper animation_line02_wrapper"><span
-                            class="animation_line animation_line02"></span></span>
-                    <span class="animation_line animation_line03"></span>
-                    <span class="animation_line_wrapper animation_line04_wrapper"><span
-                            class="animation_line animation_line04"></span></span>
-                    <span class="animation_line animation_line05"></span>
-                    <span class="animation_line_wrapper animation_line06_wrapper"><span
-                            class="animation_line animation_line06"></span></span>
-                    <span class="animation_line animation_line07"></span>
-                    <span class="animation_line_wrapper animation_line08_wrapper"><span
-                            class="animation_line animation_line08"></span></span>
-                </div>
-                <div class="wave">
-                    <div class="wave_wrapper">
-                        <div class="wave_box"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="animation02">
-        <div class="rhombus_box">
-            <span class="rhombus_item_wrapper rhombus_item01_wrapper"><span class="rhombus_item"></span></span>
-            <span class="rhombus_item_wrapper rhombus_item02_wrapper"><span class="rhombus_item"></span></span>
-        </div>
-        <div class="double_content">
-            <div class="double_wrapper02 dotted02">
-                <div class="dotted_hide">
-                    <div class="double_wrapper01 dotted01"><span class="dotted_right"></span></div>
-                </div>
-            </div>
-            <div class="double_wrapper02 white02">
-                <div class="double_wrapper01 white01"></div>
-            </div>
-            <div class="double_wrapper02 gray02">
-                <div class="double_wrapper01 gray01"></div>
-            </div>
-            <div class="double_wrapper02 orange02">
-                <div class="double_wrapper01 orange01"></div>
-            </div>
-        </div>
-        <div class="name">
-            <p>SHUKLA-STH</p>
-            <span class="name_circle01"></span>
-            <span class="name_circle02"></span>
-        </div>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">
+        <span class="gradient-text">Shukla Shrestha</span>
+        <span class="logo-underline"></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <button class="nav-item" data-section="home">Home</button>
+        <button class="nav-item" data-section="about">About</button>
+        <button class="nav-item" data-section="experience">Experience</button>
+        <button class="nav-item" data-section="projects">Projects</button>
+        <button class="nav-item" data-section="skills">Skills</button>
+        <button class="nav-item" data-section="contact">Contact</button>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
 
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+      <div class="mobile-nav-items">
+        <button class="mobile-nav-item" data-section="home">Home</button>
+        <button class="mobile-nav-item" data-section="about">About</button>
+        <button class="mobile-nav-item" data-section="experience">Experience</button>
+        <button class="mobile-nav-item" data-section="projects">Projects</button>
+        <button class="mobile-nav-item" data-section="skills">Skills</button>
+        <button class="mobile-nav-item" data-section="contact">Contact</button>
+      </div>
+    </div>
+  </header>
 
-    <script src="script.js"></script>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="hero-bg">
+      <div class="gradient-overlay"></div>
+      <div class="purple-blob"></div>
+      <div class="cyan-blob"></div>
+    </div>
 
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-            apiKey: "AIzaSyB4MYLYSToRZHnYKpfRRQTwGJ_tqncOfGI",
-            authDomain: "portfolio-4d53d.firebaseapp.com",
-            databaseURL: "https://portfolio-4d53d.firebaseio.com",
-            projectId: "portfolio-4d53d",
-            storageBucket: "portfolio-4d53d.appspot.com",
-            messagingSenderId: "1019110574514",
-            appId: "1:1019110574514:web:7814a2787bfbd4efb93cab",
-            measurementId: "G-56GN9LR4S5"
-        };
+    <div class="container">
+      <div class="hero-content">
+        <div class="animated-gradient-text">
+          <h1>Shukla Shrestha</h1>
+        </div>
 
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-    </script>
+        <div class="typewriter-container">
+          <div class="typewriter-text">
+            <span>Software </span>
+            <span class="purple-text">Engineer</span>
+            <span> & </span>
+            <span class="cyan-text">Mobile App</span>
+            <span> Developer</span>
+          </div>
+          <span class="cursor"></span>
+        </div>
 
+        <div class="hero-buttons">
+          <button class="primary-btn" data-section="projects">
+            View My Projects
+            <i class="fas fa-arrow-right"></i>
+          </button>
+          <button class="outline-btn" data-section="contact">
+            Contact Me
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="grid-bg"></div>
+
+    <div class="container">
+      <div class="section-header">
+        <h2 class="gradient-text">About Me</h2>
+        <div class="gradient-line"></div>
+        <p>Experienced Flutter Developer with 3+ Years of Expertise</p>
+      </div>
+
+      <div class="about-content">
+        <div class="about-image-container">
+          <div class="about-image">
+            <div class="image-overlay"></div>
+            <img src="images/profile.png" alt="Shukla Shrestha">
+          </div>
+          <div class="image-decoration"></div>
+        </div>
+
+        <div class="about-text">
+          <h3 class="gradient-text">Who am I?</h3>
+          <p>
+            I'm an experienced Flutter developer with more than 3 years of expertise in building mobile
+            applications. I specialize in creating high-quality, responsive, and feature-rich apps for both Android
+            and iOS platforms.
+          </p>
+          <p>
+            My technical skills include Google Firebase integration, third-party API integration, and state management with Provider, Flutter Bloc, and GetX.
+          </p>
+
+          <div class="skills-badges">
+            <span class="badge purple-badge">Flutter</span>
+            <span class="badge cyan-badge">Dart</span>
+            <span class="badge purple-badge">Firebase</span>
+            <span class="badge cyan-badge">API Integration</span>
+            <span class="badge purple-badge">State Management</span>
+            <span class="badge cyan-badge">Payment Integration</span>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-btn">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="social-btn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:shukla.sth@gmail.com" class="social-btn">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience-section">
+    <div class="grid-bg"></div>
+
+    <div class="container">
+      <div class="section-header">
+        <h2 class="gradient-text">Work Experience</h2>
+        <div class="gradient-line"></div>
+        <p>My professional journey as a developer</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="gradient-text">Senior Flutter Developer at VolgAI Pvt Ltd</h3>
+              <div class="timeline-date">
+                <i class="fas fa-calendar"></i>
+                June 2021 - Present
+              </div>
+            </div>
+            <p>Created a diverse range of Flutter applications including e-commerce, dating, notification, coffee rewards, and POS systems.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="gradient-text">Part-time Flutter Developer at Masovision Technology</h3>
+              <div class="timeline-date">
+                <i class="fas fa-calendar"></i>
+                August 2022 - October 2023
+              </div>
+            </div>
+            <p>Implemented feature enhancements for the Kaha mobile app and bug fixes.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="gradient-text">Junior Flutter Developer at Candid IT Solution</h3>
+              <div class="timeline-date">
+                <i class="fas fa-calendar"></i>
+                February 2021 - May 2021
+              </div>
+            </div>
+            <p>Developed delivery and seller applications while also providing bug fixes and implementing feature enhancements for the Stopgrab e-commerce platform, ensuring seamless functionality across Android and iOS platforms.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="gradient-text">Internship and Trainee at Medini Software Pvt. Ltd</h3>
+              <div class="timeline-date">
+                <i class="fas fa-calendar"></i>
+                August 2020 - December 2020
+              </div>
+            </div>
+            <p>Worked extensively with Laravel as well as gained experience in Flutter app development.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="grid-bg"></div>
+
+    <div class="container">
+      <div class="section-header">
+        <h2 class="gradient-text">My Projects</h2>
+        <div class="gradient-line"></div>
+        <p>Showcasing my Flutter application portfolio</p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/500x300?text=PosApt+App" alt="PosApt App">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://play.google.com/store/apps/details?id=com.volgai.pos_account" class="project-link-btn" target="_blank">
+                  Google Play
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>PosApt App</h3>
+            <p>Point of Sale application for business management, inventory tracking, and sales reporting.</p>
+            <div class="project-tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Database</span>
+              <span class="tag">Payment Processing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/500x300?text=Food+Order+App" alt="Food Order App">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://play.google.com/store/apps/details?id=com.volgai.foodApp" class="project-link-btn" target="_blank">
+                  Google Play
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Food Order App</h3>
+            <p>A comprehensive food ordering application with restaurant listings, menu browsing, and order tracking.</p>
+            <div class="project-tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Payment Integration</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/500x300?text=BMiDate+App" alt="BMiDate App">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://play.google.com/store/apps/details?id=com.dateapp.bmidate" class="project-link-btn" target="_blank">
+                  Google Play
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="https://apps.apple.com/np/app/b-midate-date-chat-hookup/id1610073728" class="project-link-btn" target="_blank">
+                  App Store
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>BMiDate – Dating App</h3>
+            <p>A dating application with user profiles, matching algorithm, and real-time chat functionality.</p>
+            <div class="project-tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Real-time Chat</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/500x300?text=Kaha+App" alt="Kaha App">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://play.google.com/store/apps/details?id=com.kaha_hits.kaha" class="project-link-btn" target="_blank">
+                  Google Play
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Kaha App</h3>
+            <p>Location-based service application with feature enhancements and bug fixes.</p>
+            <div class="project-tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Maps API</span>
+              <span class="tag">Location Services</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/500x300?text=StopGrab+App" alt="StopGrab App">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://play.google.com/store/apps/details?id=com.app.stopgrab" class="project-link-btn" target="_blank">
+                  Google Play
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>StopGrab App</h3>
+            <p>E-commerce platform with product browsing, cart management, and secure checkout.</p>
+            <div class="project-tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Payment Integration</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/500x300?text=Electricity+Bill+App" alt="Electricity Bill Calculator Nepal">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://play.google.com/store/apps/details?id=np.shrestha.electricitybill" class="project-link-btn" target="_blank">
+                  Google Play
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Electricity Bill Calculator Nepal</h3>
+            <p>Utility app for calculating accurate monthly electricity bill payments in Nepal.</p>
+            <div class="project-tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Calculations</span>
+              <span class="tag">Utility</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <div class="grid-bg"></div>
+
+    <div class="container">
+      <div class="section-header">
+        <h2 class="gradient-text">My Skills</h2>
+        <div class="gradient-line"></div>
+        <p>Technologies and tools I work with</p>
+      </div>
+
+      <div class="skills-content">
+        <div class="technical-skills">
+          <h3 class="gradient-text">Technical Skills</h3>
+
+          <div class="skill-bars">
+            <div class="skill-bar">
+              <div class="skill-info">
+                <span class="skill-name">Flutter & Dart</span>
+                <span class="skill-percentage">95%</span>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress" data-width="95" style="background: linear-gradient(to right, #06b6d4, #3b82f6);">
+                  <div class="skill-progress-highlight"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-bar">
+              <div class="skill-info">
+                <span class="skill-name">Firebase</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress" data-width="90" style="background: linear-gradient(to right, #eab308, #f97316);">
+                  <div class="skill-progress-highlight"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-bar">
+              <div class="skill-info">
+                <span class="skill-name">State Management</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress" data-width="85" style="background: linear-gradient(to right, #a855f7, #ec4899);">
+                  <div class="skill-progress-highlight"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-bar">
+              <div class="skill-info">
+                <span class="skill-name">API Integration</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress" data-width="90" style="background: linear-gradient(to right, #22c55e, #10b981);">
+                  <div class="skill-progress-highlight"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-bar">
+              <div class="skill-info">
+                <span class="skill-name">Payment Integration</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress" data-width="80" style="background: linear-gradient(to right, #a855f7, #06b6d4);">
+                  <div class="skill-progress-highlight"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-bar">
+              <div class="skill-info">
+                <span class="skill-name">UI/UX Design</span>
+                <span class="skill-percentage">75%</span>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress" data-width="75" style="background: linear-gradient(to right, #ec4899, #f43f5e);">
+                  <div class="skill-progress-highlight"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tools-skills">
+          <h3 class="gradient-text">Languages & Tools</h3>
+
+          <div class="tools-grid">
+            <div class="tool-card">
+              <i class="fas fa-mobile-alt"></i>
+              <span class="tool-name" style="background: linear-gradient(to right, #06b6d4, #3b82f6); -webkit-background-clip: text; color: transparent;">Flutter</span>
+            </div>
+
+            <div class="tool-card">
+              <i class="fas fa-code"></i>
+              <span class="tool-name" style="background: linear-gradient(to right, #3b82f6, #4f46e5); -webkit-background-clip: text; color: transparent;">Dart</span>
+            </div>
+
+            <div class="tool-card">
+              <i class="fas fa-database"></i>
+              <span class="tool-name" style="background: linear-gradient(to right, #f97316, #ef4444); -webkit-background-clip: text; color: transparent;">Firebase</span>
+            </div>
+
+            <div class="tool-card">
+              <i class="fas fa-code"></i>
+              <span class="tool-name" style="background: linear-gradient(to right, #a855f7, #ec4899); -webkit-background-clip: text; color: transparent;">Provider</span>
+            </div>
+
+            <div class="tool-card">
+              <i class="fas fa-code"></i>
+              <span class="tool-name" style="background: linear-gradient(to right, #22c55e, #10b981); -webkit-background-clip: text; color: transparent;">Flutter Bloc</span>
+            </div>
+
+            <div class="tool-card">
+              <i class="fas fa-code"></i>
+              <span class="tool-name" style="background: linear-gradient(to right, #a855f7, #06b6d4); -webkit-background-clip: text; color: transparent;">GetX</span>
+            </div>
+
+            <div class="tool-card">
+              <i class="fas fa-code"></i>
+              <span class="tool-name" style="background: linear-gradient(to right, #f97316, #ef4444); -webkit-background-clip: text; color: transparent;">Git</span>
+            </div>
+
+            <div class="tool-card">
+              <i class="fas fa-code"></i>
+              <span class="tool-name" style="background: linear-gradient(to right, #64748b, #475569); -webkit-background-clip: text; color: transparent;">C/C++</span>
+            </div>
+
+            <div class="tool-card">
+              <i class="fas fa-code"></i>
+              <span class="tool-name" style="background: linear-gradient(to right, #f97316, #ef4444); -webkit-background-clip: text; color: transparent;">Java</span>
+            </div>
+
+            <div class="tool-card">
+              <i class="fas fa-globe"></i>
+              <span class="tool-name" style="background: linear-gradient(to right, #ef4444, #ec4899); -webkit-background-clip: text; color: transparent;">Laravel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="grid-bg"></div>
+
+    <div class="container">
+      <div class="section-header">
+        <h2 class="gradient-text">Get In Touch</h2>
+        <div class="gradient-line"></div>
+        <p>Have a project in mind? Let's work together!</p>
+      </div>
+
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3 class="gradient-text">Contact Information</h3>
+          <p>
+            Feel free to reach out to me through any of these channels. I'm always open to discussing new projects,
+            creative ideas, or opportunities to be part of your vision.
+          </p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <p>shukla.sth@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Phone</h4>
+                <p>+977 9847260218</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <p>Kalanki, Kathmandu, Nepal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-container">
+          <h3 class="gradient-text">Send Me a Message</h3>
+
+          <form class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your Name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Your Email">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="Subject">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="grid-bg"></div>
+
+    <div class="container">
+      <p>© <span id="current-year"></span> Shukla Shrestha. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
+
